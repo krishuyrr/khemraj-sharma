@@ -19,16 +19,39 @@
 <style>
 .bottom-arrow {
   position: fixed;
-  bottom: 20px;
+  bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 42px;
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 3px 0 #777, 0 6px 0 #444, 0 9px 12px rgba(0,0,0,.45);
+  animation: arrow3D 1.2s ease-in-out infinite;
+  z-index: 9999;
+}
+
+@keyframes arrow3D {
+  0%, 100% { transform: translateX(-50%) translateY(0) scale(1); }
+  50% { transform: translateX(-50%) translateY(10px) scale(1.08); }
 }
 </style>
-</style>
-        body { background-color: #0c0a1d; color: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow-x: hidden; }
-        #canvas-container { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; }
+
+body {
+  background-color: #0c0a1d;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+#canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
         .glass-card { background: rgba(26, 22, 53, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(255, 215, 0, 0.3); }
         .glow-text { text-shadow: 0 0 15px rgba(234, 179, 8, 0.8); }
         .pulse-glow { animation: pulseGlow 2s infinite; }
